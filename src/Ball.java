@@ -14,8 +14,8 @@ public class Ball extends PApplet {
         this.positionX = 0;
     }
     
-    public void ball(PApplet draw) {
-        draw.ellipse(positionX,height,DIAMETER,DIAMETER);
+    public void ball(PApplet pApplet) {
+        pApplet.ellipse(positionX,height,DIAMETER,DIAMETER);
     }
 
     public void newPosition() {
