@@ -6,8 +6,7 @@ public class OOPFourBall extends PApplet {
 
     public static final int HEIGHT = 480;
     public static final int WIDTH = 640;
-    public static ArrayList<Ball> Balls = new ArrayList<>();
-    ;
+    public static ArrayList<Ball> balls = new ArrayList<>();
 
     @Override
     public void settings() {
@@ -16,15 +15,16 @@ public class OOPFourBall extends PApplet {
 
     @Override
     public void setup() {
-        for (int ball = 1; ball <= 4; ball++) {
-            Balls.add(new Ball(ball, ball * HEIGHT / 5));
+        for (int speed = 1; speed <= 4; speed++) {
+            balls.add(new Ball(speed, speed * HEIGHT / 5));
         }
     }
 
     @Override
     public void draw() {
-        for (Ball ball : Balls) {
-            ball.moveBall(this);
+        for (Ball ball : balls) {
+            ball.ball(this);
+            ball.newPosition();
         }
     }
 

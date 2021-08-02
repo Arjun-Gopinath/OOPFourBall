@@ -5,21 +5,20 @@ public class Ball extends PApplet {
     private final int height;
     private int positionX;
     private int speed;
-    private final int diameter;
+    private final int DIAMETER;
 
     public Ball(int speed, int height) {
         this.height = height;
         this.speed = speed;
-        this.diameter = 10;
+        this.DIAMETER = 10;
         this.positionX = 0;
     }
     
-    public void moveBall(PApplet draw) {
-        draw.ellipse(this.positionX,this.height,this.diameter,this.diameter);
-        newPosition();
+    public void ball(PApplet draw) {
+        draw.ellipse(positionX,height,DIAMETER,DIAMETER);
     }
 
-    private void newPosition() {
-        this.positionX = this.positionX + this.speed;
+    public void newPosition() {
+        positionX = positionX + speed;
     }
 }
